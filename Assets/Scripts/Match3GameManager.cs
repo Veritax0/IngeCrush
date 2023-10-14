@@ -120,7 +120,6 @@ public class Match3GameManager : MonoBehaviour {
             {
                 for (int i = 0; i < sizeX; i++)
                 {
-                    //TODO CAER
                     if (Fall(i, j))
                     {
                         Sw = true;
