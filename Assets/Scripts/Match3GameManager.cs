@@ -17,6 +17,8 @@ public class Match3GameManager : MonoBehaviour {
     bool CanMove = false;
     bool fast = true;
 
+    public Puntaje puntaje;
+
 	void Start ()
     {
         grid = new Tile[sizeX, sizeY * 2];
@@ -96,6 +98,9 @@ public class Match3GameManager : MonoBehaviour {
         TilesToDestroy = TilesToDestroy.Distinct().ToList();
 
         bool sw = TilesToDestroy.Count == 0;
+
+        puntaje.anadirPuntaje(TilesToDestroy.Count/3);
+
 
         for (int i = 0; i < TilesToDestroy.Count; i++)
         {
